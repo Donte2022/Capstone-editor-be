@@ -23,16 +23,27 @@ public class ProcessService {
 
         try {
             return this.processRepository.save(
-                new Processes(requestDTO.processTitle, requestDTO.prompt, requestDTO.dateCreated));
+                    new Processes(requestDTO.processTitle, requestDTO.prompt, requestDTO.dateCreated));
 
 
-        }
-        catch ( RuntimeException exception) {
+        } catch (RuntimeException exception) {
             throw new ResponseStatusException(HttpStatus.SERVICE_UNAVAILABLE);
         }
     }
 
     public Iterable<Processes> getTitle() {
         return processRepository.findAll();
+    }
+
+    public boolean deleteById(Long id) {
+
+        try {
+            var stage = processRepository.findById(id).orElseThrow();
+            processRepository.deleteById(id);
+            return true;
+
+        } catch (Exception exception) {
+            return false;
+        }
     }
 }

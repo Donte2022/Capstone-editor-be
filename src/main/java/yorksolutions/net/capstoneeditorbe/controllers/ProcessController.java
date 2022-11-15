@@ -1,5 +1,6 @@
 package yorksolutions.net.capstoneeditorbe.controllers;
 
+import org.apache.logging.log4j.message.Message;
 import org.springframework.web.bind.annotation.*;
 import yorksolutions.net.capstoneeditorbe.dto.ProcessRequestDTO;
 import yorksolutions.net.capstoneeditorbe.entities.Processes;
@@ -29,4 +30,15 @@ public class ProcessController {
     }
 
 
+    static class Message {
+        public String message;
+        Message(String message) {
+            this.message = message;
+        }
+    }
+    @DeleteMapping("/{id}")
+    Message deleteById(@PathVariable Long id) {
+        return new Message(processService.deleteById(id) ? "Stage successfully deleted" :
+                "fail to delete stage");
+    }
 }
