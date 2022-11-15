@@ -1,0 +1,11 @@
+
+POST http://localhost:8080/api/processes
+Content-Type: application/json
+
+{
+  "dateCreated": "2020-03-08",
+
+  "processTitle":"Apples"
+
+
+}
