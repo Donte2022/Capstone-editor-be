@@ -7,6 +7,8 @@ import yorksolutions.net.capstoneeditorbe.dto.ProcessRequestDTO;
 import yorksolutions.net.capstoneeditorbe.entities.Processes;
 import yorksolutions.net.capstoneeditorbe.repositories.ProcessRepository;
 
+import java.util.Optional;
+
 @Service
 public class ProcessService {
 
@@ -28,5 +30,9 @@ public class ProcessService {
         catch ( RuntimeException exception) {
             throw new ResponseStatusException(HttpStatus.SERVICE_UNAVAILABLE);
         }
+    }
+
+    public Iterable<Processes> getTitle() {
+        return processRepository.findAll();
     }
 }
