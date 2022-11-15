@@ -46,4 +46,19 @@ public class ProcessService {
             return false;
         }
     }
+
+    public Processes updateStage(ProcessRequestDTO requestDTO, Long id) {
+
+        Optional<Processes> updateStage = this.processRepository.findById(id);
+        if(updateStage.isEmpty()) {
+            throw new ResponseStatusException(HttpStatus.NOT_FOUND);
+        }
+
+        Processes processes = updateStage.get();
+        processes.setDate(requestDTO.dateCreated);
+        processes.setPrompt(requestDTO.prompt);
+        processes.setTitle(requestDTO.processTitle);
+
+        return processRepository.save(processes);
+    }
 }

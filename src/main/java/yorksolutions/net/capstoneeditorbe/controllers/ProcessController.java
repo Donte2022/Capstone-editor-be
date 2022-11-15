@@ -41,4 +41,9 @@ public class ProcessController {
         return new Message(processService.deleteById(id) ? "Stage successfully deleted" :
                 "fail to delete stage");
     }
+
+    @PutMapping("/{id}")
+    public Processes updateStage(@RequestBody ProcessRequestDTO requestDTO, @PathVariable Long id) {
+        return processService.updateStage(requestDTO, id);
+    }
 }
