@@ -1,0 +1,11 @@
+
+PUT http://localhost:8080/api/titles/1
+Content-Type: application/json
+
+{
+  "id": 1,
+  "title": "Do all dogs go to heaven",
+  "startDate": "2020-03-05" ,
+  "endDate": "2020-03-08",
+  "description": "A survey that involves dog lovers"
+}

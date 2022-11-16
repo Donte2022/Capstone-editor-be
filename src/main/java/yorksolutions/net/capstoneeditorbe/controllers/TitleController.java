@@ -1,11 +1,8 @@
 package yorksolutions.net.capstoneeditorbe.controllers;
 
 import org.springframework.web.bind.annotation.*;
-import yorksolutions.net.capstoneeditorbe.dto.ProcessRequestDTO;
 import yorksolutions.net.capstoneeditorbe.dto.TitleRequestDTO;
-import yorksolutions.net.capstoneeditorbe.entities.Processes;
 import yorksolutions.net.capstoneeditorbe.entities.Title;
-import yorksolutions.net.capstoneeditorbe.services.ProcessService;
 import yorksolutions.net.capstoneeditorbe.services.TitleService;
 
 @RestController
@@ -36,15 +33,15 @@ public class TitleController {
             this.message = message;
         }
     }
-//    @DeleteMapping("/{id}")
-//    TitleController.Message deleteById(@PathVariable Long id) {
-//        return new TitleController(TitleService.deleteById(id) ? "Stage successfully deleted" :
-//                "fail to delete stage");
-//    }
+    @DeleteMapping("/{id}")
+    Message deleteById(@PathVariable Long id) {
+        return new Message(titleService.deleteById(id) ? "Stage successfully deleted" :
+                "fail to delete stage");
+    }
 
-//    @PutMapping("/{id}")
-//    public Title updateStage(@RequestBody TitleRequestDTO requestDTO, @PathVariable Long id) {
-//        return titleService.updateTitle(requestDTO, id);
-//    }
+    @PutMapping("/{id}")
+    public Title updateTitle(@RequestBody TitleRequestDTO requestDTO, @PathVariable Long id) {
+        return titleService.updateTitle(requestDTO, id);
+    }
 
 }

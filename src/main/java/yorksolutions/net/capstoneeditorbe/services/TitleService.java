@@ -48,19 +48,19 @@ public class TitleService {
         }
     }
 
-//    public Title updateTitle(TitleRequestDTO requestDTO, Long id) {
-//
-//        Optional<Title> updateTitle = this.titleRepository.findById(id);
-//        if(updateTitle.isEmpty()) {
-//            throw new ResponseStatusException(HttpStatus.NOT_FOUND);
-//        }
-//
-//        Title titles = updateTitle.get();
-//        Title.setTitle(requestDTO.title);
-//        Title.setStartDate(requestDTO.startDate);
-//        Title.setEndDate(requestDTO.endDate);
-//        Title.setDescription(requestDTO.description);
-//
-//        return TitleRepository.save(titles);
-//    }
+    public Title updateTitle(TitleRequestDTO requestDTO, Long id) {
+
+        Optional<Title> updateTitle = this.titleRepository.findById(id);
+        if(updateTitle.isEmpty()) {
+            throw new ResponseStatusException(HttpStatus.NOT_FOUND);
+        }
+
+        Title titles = updateTitle.get();
+        titles.setTitle(requestDTO.title);
+        titles.setStartDate(requestDTO.startDate);
+        titles.setEndDate(requestDTO.endDate);
+        titles.setDescription(requestDTO.description);
+
+        return titleRepository.save(titles);
+    }
 }
