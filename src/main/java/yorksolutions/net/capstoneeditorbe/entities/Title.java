@@ -19,6 +19,9 @@ public class Title {
 
     private String description;
 
+//    @OneToOne
+//    private Prompt prompt;
+
     public Title() {
     }
 

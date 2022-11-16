@@ -1,0 +1,10 @@
+
+POST http://localhost:8080/api/prompt
+Content-Type: application/json
+
+
+{
+  "idOfTitle": 1,
+  "prompt": "have fun"
+}
+

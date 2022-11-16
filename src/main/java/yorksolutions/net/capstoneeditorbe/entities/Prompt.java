@@ -10,47 +10,38 @@ public class Prompt {
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private Long id;
 
-    @OneToMany
-    private Set<Responses> responses;
+    @OneToOne
+    private Title title;
 
-    private Long processId;
+    private Long idOfTitle;
 
-    private String question;
+    private String prompt;
 
     public Prompt() {
     }
 
-    public Prompt(Set<Responses> responses, Long processId, String question) {
-        this.responses = responses;
-        this.processId = processId;
-        this.question = question;
+    public Prompt(Long idOfTitle, String prompt) {
+        this.idOfTitle = idOfTitle;
+        this.prompt = prompt;
     }
 
     public Long getId() {
         return id;
     }
 
-    public Set<Responses> getResponses() {
-        return responses;
+    public Long getIdOfTitle() {
+        return idOfTitle;
     }
 
-    public void setResponses(Set<Responses> responses) {
-        this.responses = responses;
+    public void setIdOfTitle(Long idOfTitle) {
+        this.idOfTitle = idOfTitle;
     }
 
-    public Long getProcessId() {
-        return processId;
+    public String getPrompt() {
+        return prompt;
     }
 
-    public void setProcessId(Long processId) {
-        this.processId = processId;
-    }
-
-    public String getQuestion() {
-        return question;
-    }
-
-    public void setQuestion(String question) {
-        this.question = question;
+    public void setPrompt(String prompt) {
+        this.prompt = prompt;
     }
 }

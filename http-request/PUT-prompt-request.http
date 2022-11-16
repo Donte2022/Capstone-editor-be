@@ -1,0 +1,7 @@
+PUT http://localhost:8080/api/prompt/2
+Content-Type: application/json
+
+{
+  "idOfTitle": 2,
+  "prompt": "Eggs are Scarry!"
+}
