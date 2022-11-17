@@ -9,7 +9,7 @@ import java.util.Set;
 
 public class StageRequestDTO {
 
-    public String StageTitle;
+    public String stageTitle;
 
     public Date endDate;
 
