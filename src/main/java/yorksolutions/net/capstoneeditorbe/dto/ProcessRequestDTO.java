@@ -11,7 +11,7 @@ public class ProcessRequestDTO {
 
     public String process;
 
-    public Set<Prompt> prompt;
+
 
 
 }

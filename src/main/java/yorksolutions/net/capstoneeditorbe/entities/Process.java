@@ -1,5 +1,7 @@
 package yorksolutions.net.capstoneeditorbe.entities;
 
+import org.springframework.beans.factory.annotation.Autowired;
+
 import javax.persistence.*;
 
 @Entity
@@ -17,17 +19,13 @@ public class Process {
     public Process() {
     }
 
-    public Process(String process, Stage stage) {
+    @Autowired
+    public Process(String process) {
         this.process = process;
-//        this.stage = stage;
     }
 
     public Long getId() {
         return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
     }
 
     public String getProcess() {
@@ -37,12 +35,4 @@ public class Process {
     public void setProcess(String process) {
         this.process = process;
     }
-
-//    public Stage getStage() {
-//        return stage;
-//    }
-//
-//    public void setStage(Stage stage) {
-//        this.stage = stage;
-//    }
 }
