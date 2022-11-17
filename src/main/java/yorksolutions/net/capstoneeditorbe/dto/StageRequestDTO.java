@@ -11,12 +11,14 @@ public class StageRequestDTO {
 
     public String StageTitle;
 
-//    public Set<Prompt> prompts;
-//
-//
-//    public Set<Process> process;
-
     public Date endDate;
 
     public Date startDate;
+
+    public String description;
+
+    //    public Set<Prompt> prompts;
+//
+//
+//    public Set<Process> process;
 }

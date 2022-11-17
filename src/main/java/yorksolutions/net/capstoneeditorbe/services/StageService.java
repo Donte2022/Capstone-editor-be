@@ -26,7 +26,7 @@ public class StageService {
 
         try {
             return this.stageRepository.save(
-                    new Stage(requestDTO.StageTitle, requestDTO.startDate, requestDTO.endDate));
+                    new Stage(requestDTO.StageTitle, requestDTO.startDate, requestDTO.endDate, requestDTO.description));
 
 
         } catch (RuntimeException exception) {
@@ -61,6 +61,7 @@ public class StageService {
         stage.setStageTitle(requestDTO.StageTitle);
         stage.setStartDate(requestDTO.startDate);
         stage.setEndDate(requestDTO.endDate);
+        stage.setDescription(requestDTO.description);
 
         return stageRepository.save(stage);
     }

@@ -1,0 +1,14 @@
+
+PUT http://localhost:8080/api/stage/3
+Content-Type: application/json
+
+{
+  "StageTitle": "Movie Night",
+
+  "startDate": "2020-03-05",
+
+  "endDate": "2020-05-05",
+
+  "description": "None needed"
+
+}

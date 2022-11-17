@@ -25,15 +25,18 @@ public class Stage {
 
     private Date startDate;
 
+    private String description;
+
     public Stage() {
     }
 
-    public Stage(String StageTitle, Date endDate, Date startDate) {
+    public Stage(String StageTitle, Date endDate, Date startDate, String description) {
         this.StageTitle = StageTitle;
 //        this.process = process;
 //        this.prompts = prompts;
         this.endDate = endDate;
         this.startDate = startDate;
+        this.description = description;
     }
 
     public Long getiD() {
@@ -79,5 +82,13 @@ public class Stage {
 
     public void setStartDate(Date startDate) {
         this.startDate = startDate;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
     }
 }

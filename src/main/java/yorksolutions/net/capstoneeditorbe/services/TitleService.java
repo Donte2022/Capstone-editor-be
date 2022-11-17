@@ -3,9 +3,7 @@ package yorksolutions.net.capstoneeditorbe.services;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 import org.springframework.web.server.ResponseStatusException;
-import yorksolutions.net.capstoneeditorbe.dto.ProcessRequestDTO;
 import yorksolutions.net.capstoneeditorbe.dto.TitleRequestDTO;
-import yorksolutions.net.capstoneeditorbe.entities.Stage;
 import yorksolutions.net.capstoneeditorbe.entities.Title;
 import yorksolutions.net.capstoneeditorbe.repositories.TitleRepository;
 
