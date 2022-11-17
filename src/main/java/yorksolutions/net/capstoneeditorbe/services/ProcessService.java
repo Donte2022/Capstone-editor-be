@@ -4,7 +4,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 import org.springframework.web.server.ResponseStatusException;
 import yorksolutions.net.capstoneeditorbe.dto.ProcessRequestDTO;
-import yorksolutions.net.capstoneeditorbe.entities.Processes;
+import yorksolutions.net.capstoneeditorbe.entities.Stage;
 import yorksolutions.net.capstoneeditorbe.repositories.ProcessRepository;
 
 import java.util.Optional;
@@ -19,11 +19,11 @@ public class ProcessService {
     }
 
 
-    public Processes create(ProcessRequestDTO requestDTO) {
+    public Process create(ProcessRequestDTO requestDTO) {
 
         try {
             return this.processRepository.save(
-                    new Processes(requestDTO.processTitle, requestDTO.prompt, requestDTO.dateCreated));
+                    new Process(requestDTO.process));
 
 
         } catch (RuntimeException exception) {
@@ -31,7 +31,7 @@ public class ProcessService {
         }
     }
 
-    public Iterable<Processes> getTitle() {
+    public Iterable<Process> getTitle() {
         return processRepository.findAll();
     }
 
@@ -47,18 +47,17 @@ public class ProcessService {
         }
     }
 
-    public Processes updateStage(ProcessRequestDTO requestDTO, Long id) {
-
-        Optional<Processes> updateStage = this.processRepository.findById(id);
-        if(updateStage.isEmpty()) {
-            throw new ResponseStatusException(HttpStatus.NOT_FOUND);
-        }
-
-        Processes processes = updateStage.get();
-        processes.setDate(requestDTO.dateCreated);
-        processes.setPrompt(requestDTO.prompt);
-        processes.setTitle(requestDTO.processTitle);
-
-        return processRepository.save(processes);
-    }
+//    public Process updateStage(ProcessRequestDTO requestDTO, Long id) {
+//
+//        Optional<Process> updateProcess = this.processRepository.findById(id);
+//        if(updateProcess.isEmpty()) {
+//            throw new ResponseStatusException(HttpStatus.NOT_FOUND);
+//        }
+//
+//        Process process = updateProcess.get();
+//        process.(requestDTO.Set<processes>);
+//        process.setStage(requestDTO.stage);
+//
+//        return processRepository.save(process);
+//    }
 }

@@ -8,10 +8,10 @@ import java.util.Set;
 public class ProcessRequestDTO {
 
 
-    public Date dateCreated;
 
-    public String processTitle;
+    public String process;
 
     public Set<Prompt> prompt;
+
 
 }

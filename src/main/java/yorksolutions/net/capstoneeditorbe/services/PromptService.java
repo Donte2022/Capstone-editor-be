@@ -21,11 +21,11 @@ public class PromptService {
 
         try {
             return this.promptRepository.save(
-                    new Prompt(requestDTO.idOfTitle, requestDTO.prompt));
+                    new Prompt(requestDTO.idOfTitle, requestDTO.prompt, requestDTO.process));
 
 
         } catch (RuntimeException exception) {
-            throw new ResponseStatusException(HttpStatus.CONFLICT);
+            throw new ResponseStatusException(HttpStatus.METHOD_NOT_ALLOWED);
         }
     }
 
@@ -55,6 +55,9 @@ public class PromptService {
         Prompt prompt = updateThisPrompt.get();
 //        prompt.setTitleId(requestDTO.titleId);
         prompt.setPrompt(requestDTO.prompt);
+
+        prompt.setProcess(requestDTO.process);
+
 //        titles.setEndDate(requestDTO.endDate);
 //        titles.setDescription(requestDTO.description);
 

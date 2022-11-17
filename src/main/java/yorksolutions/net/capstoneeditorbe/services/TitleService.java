@@ -5,7 +5,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.server.ResponseStatusException;
 import yorksolutions.net.capstoneeditorbe.dto.ProcessRequestDTO;
 import yorksolutions.net.capstoneeditorbe.dto.TitleRequestDTO;
-import yorksolutions.net.capstoneeditorbe.entities.Processes;
+import yorksolutions.net.capstoneeditorbe.entities.Stage;
 import yorksolutions.net.capstoneeditorbe.entities.Title;
 import yorksolutions.net.capstoneeditorbe.repositories.TitleRepository;
 

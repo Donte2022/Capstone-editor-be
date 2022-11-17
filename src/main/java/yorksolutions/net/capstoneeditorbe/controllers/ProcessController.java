@@ -2,7 +2,7 @@ package yorksolutions.net.capstoneeditorbe.controllers;
 
 import org.springframework.web.bind.annotation.*;
 import yorksolutions.net.capstoneeditorbe.dto.ProcessRequestDTO;
-import yorksolutions.net.capstoneeditorbe.entities.Processes;
+import yorksolutions.net.capstoneeditorbe.entities.Stage;
 import yorksolutions.net.capstoneeditorbe.services.ProcessService;
 
 
@@ -18,12 +18,12 @@ public class ProcessController {
     }
 
     @PostMapping
-    public Processes create(@RequestBody ProcessRequestDTO requestDTO) {
+    public Process create(@RequestBody ProcessRequestDTO requestDTO) {
         return this.processService.create(requestDTO);
     }
 
     @GetMapping("/titles")
-    public Iterable<Processes> getTitle() {
+    public Iterable<Process> getTitle() {
         return this.processService.getTitle();
     }
 
@@ -41,7 +41,7 @@ public class ProcessController {
     }
 
     @PutMapping("/{id}")
-    public Processes updateStage(@RequestBody ProcessRequestDTO requestDTO, @PathVariable Long id) {
+    public Process updateProcess(@RequestBody ProcessRequestDTO requestDTO, @PathVariable Long id) {
         return processService.updateStage(requestDTO, id);
     }
 }
