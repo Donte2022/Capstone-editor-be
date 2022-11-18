@@ -2,7 +2,7 @@ POST http://localhost:8080/api/stage
 Content-Type: application/json
 
 {
-  "StageTitle": "Thanksgiving",
+  "stageTitle": "Christmas",
 
   "startDate": "2020-03-05",
 

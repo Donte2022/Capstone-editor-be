@@ -9,14 +9,14 @@ public class Stage {
 
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
-    private Long iD;
+    private Long id;
 
     @Column(nullable = false, unique = true)
 
-    private String StageTitle;
+    private String stageTitle;
 
-    @OneToMany
-    private Set<Prompt> prompts;
+//    @OneToMany
+//    private Set<Prompt> prompts;
 
     @OneToMany
     private Set<Process> process;
@@ -30,8 +30,8 @@ public class Stage {
     public Stage() {
     }
 
-    public Stage(String StageTitle, Date endDate, Date startDate, String description) {
-        this.StageTitle = StageTitle;
+    public Stage(String stageTitle, Date endDate, Date startDate, String description) {
+        this.stageTitle = stageTitle;
 //        this.process = process;
 //        this.prompts = prompts;
         this.endDate = endDate;
@@ -39,25 +39,16 @@ public class Stage {
         this.description = description;
     }
 
-    public Long getiD() {
-        return iD;
+    public Long getId() {
+        return id;
     }
 
-
     public String getStageTitle() {
-        return StageTitle;
+        return stageTitle;
     }
 
     public void setStageTitle(String stageTitle) {
-        StageTitle = stageTitle;
-    }
-
-    public Set<Prompt> getPrompts() {
-        return prompts;
-    }
-
-    public void setPrompts(Set<Prompt> prompts) {
-        this.prompts = prompts;
+        this.stageTitle = stageTitle;
     }
 
     public Set<Process> getProcess() {
