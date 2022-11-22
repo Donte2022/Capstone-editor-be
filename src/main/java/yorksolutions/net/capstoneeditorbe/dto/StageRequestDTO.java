@@ -17,8 +17,4 @@ public class StageRequestDTO {
 
     public String description;
 
-    //    public Set<Prompt> prompts;
-//
-//
-//    public Set<Process> process;
 }

@@ -15,11 +15,9 @@ public class Stage {
 
     private String stageTitle;
 
-//    @OneToMany
-//    private Set<Prompt> prompts;
 
     @OneToMany
-    private Set<Process> process;
+    private Set<Prompt> prompt;
 
     private Date endDate;
 
@@ -32,8 +30,6 @@ public class Stage {
 
     public Stage(String stageTitle, Date endDate, Date startDate, String description) {
         this.stageTitle = stageTitle;
-//        this.process = process;
-//        this.prompts = prompts;
         this.endDate = endDate;
         this.startDate = startDate;
         this.description = description;
@@ -51,12 +47,12 @@ public class Stage {
         this.stageTitle = stageTitle;
     }
 
-    public Set<Process> getProcess() {
-        return process;
+    public Set<Prompt> getPrompt() {
+        return prompt;
     }
 
-    public void setProcess(Set<Process> process) {
-        this.process = process;
+    public void setPrompt(Set<Prompt> prompt) {
+        this.prompt = prompt;
     }
 
     public Date getEndDate() {

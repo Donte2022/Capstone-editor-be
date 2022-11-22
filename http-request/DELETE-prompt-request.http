@@ -1,2 +1,2 @@
-DELETE http://localhost:8080/api/prompt/2
+DELETE http://localhost:8080/api/prompt/21
 Content-Type: application/json

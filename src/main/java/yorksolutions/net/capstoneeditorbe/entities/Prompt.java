@@ -1,5 +1,7 @@
 package yorksolutions.net.capstoneeditorbe.entities;
 
+import org.springframework.beans.factory.annotation.Autowired;
+
 import javax.persistence.*;
 import java.util.Set;
 
@@ -10,8 +12,6 @@ public class Prompt {
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private Long id;
 
-//    @OneToOne
-//    private Title titleId;
 
     private Long idOfTitle;
 
@@ -19,27 +19,39 @@ public class Prompt {
 
     private String process;
 
+    @OneToOne
+    private Stage stage;
+
     public Prompt() {
     }
 
-    public Prompt( Long idOfTitle, String prompt, String process) {
-//        this.titleId = titleId;
-        this.idOfTitle = idOfTitle;
+//    public Prompt(Long idOfTitle, String prompt) {
+//
+////        this.process = process;
+//    }
+
+//    public Prompt(String prompt, String process, Long idOfTitle) {
+//        this.idOfTitle = idOfTitle;
+//        this.process = process;
+//        this.prompt = prompt;
+//    }
+
+
+//    public Prompt(Long idOfTitle, String prompt, String process) {
+//        this.idOfTitle = idOfTitle;
+//        this.prompt = prompt;
+//        this.process = process;
+//    }
+
+    public Prompt(String prompt, Long idOfTitle, String process) {
         this.prompt = prompt;
         this.process = process;
+        this.idOfTitle = idOfTitle;
     }
 
     public Long getId() {
         return id;
     }
-
-//    public Title getTitleId() {
-//        return titleId;
-//    }
-//
-//    public void setTitleId(Title titleId) {
-//        this.titleId = titleId;
-//    }
 
     public Long getIdOfTitle() {
         return idOfTitle;
@@ -57,11 +69,19 @@ public class Prompt {
         this.prompt = prompt;
     }
 
+    public Stage getStage() {
+        return stage;
+    }
+
     public String getProcess() {
         return process;
     }
 
     public void setProcess(String process) {
         this.process = process;
+    }
+
+    public void setStage(Stage stage) {
+        this.stage = stage;
     }
 }

@@ -1,7 +1,9 @@
-PUT http://localhost:8080/api/prompt/2
+PUT http://localhost:8080/api/prompt/23
 Content-Type: application/json
 
 {
-  "idOfTitle": 2,
-  "prompt": "Eggs are Scarry!"
+  "id": 23,
+  "idOfTitle": 7,
+  "prompt": "Eggs are white",
+  "process": "Does white make them scary?"
 }
