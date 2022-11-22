@@ -2,10 +2,7 @@ package yorksolutions.net.capstoneeditorbe.controllers;
 
 import org.springframework.web.bind.annotation.*;
 import yorksolutions.net.capstoneeditorbe.dto.StageRequestDTO;
-import yorksolutions.net.capstoneeditorbe.dto.TitleRequestDTO;
 import yorksolutions.net.capstoneeditorbe.entities.Stage;
-import yorksolutions.net.capstoneeditorbe.entities.Title;
-import yorksolutions.net.capstoneeditorbe.repositories.StageRepository;
 import yorksolutions.net.capstoneeditorbe.services.StageService;
 
 @RestController

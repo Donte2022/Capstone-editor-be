@@ -53,12 +53,8 @@ public class PromptService {
         }
 
         Prompt prompt = updateThisPrompt.get();
-//        prompt.setTitleId(requestDTO.titleId);
         prompt.setPrompt(requestDTO.prompt);
-
         prompt.setProcess(requestDTO.process);
-///        titles.setEndDate(requestDTO.endDate);
-//        titles.setDescription(requestDTO.description);
 
         return promptRepository.save(prompt);
     }

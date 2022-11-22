@@ -25,24 +25,6 @@ public class Prompt {
     public Prompt() {
     }
 
-//    public Prompt(Long idOfTitle, String prompt) {
-//
-////        this.process = process;
-//    }
-
-//    public Prompt(String prompt, String process, Long idOfTitle) {
-//        this.idOfTitle = idOfTitle;
-//        this.process = process;
-//        this.prompt = prompt;
-//    }
-
-
-//    public Prompt(Long idOfTitle, String prompt, String process) {
-//        this.idOfTitle = idOfTitle;
-//        this.prompt = prompt;
-//        this.process = process;
-//    }
-
     public Prompt(String prompt, Long idOfTitle, String process) {
         this.prompt = prompt;
         this.process = process;

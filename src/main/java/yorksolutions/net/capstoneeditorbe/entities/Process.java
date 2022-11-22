@@ -1,7 +1,5 @@
 package yorksolutions.net.capstoneeditorbe.entities;
 
-import org.springframework.beans.factory.annotation.Autowired;
-
 import javax.persistence.*;
 import java.util.Set;
 
@@ -13,9 +11,6 @@ public class Process {
     private Long id;
 
     private String process;
-
-
-//    private String stage;
 
     @OneToMany
     private Set<Prompt> prompt;
@@ -31,9 +26,6 @@ public class Process {
         return id;
     }
 
-//    public void setId(Long id) {
-//        this.id = id;
-//    }
 
     public String getProcess() {
         return process;
