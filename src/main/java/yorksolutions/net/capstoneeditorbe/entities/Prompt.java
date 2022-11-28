@@ -34,6 +34,8 @@ public class Prompt {
     public Prompt(String prompt, String prompt2, String prompt3, String prompt4, Long idOfTitle, String process) {
         this.prompt = prompt;
         this.prompt2 = prompt2;
+        this.prompt3 = prompt3;
+        this.prompt4 = prompt4;
         this.process = process;
         this.idOfTitle = idOfTitle;
     }
