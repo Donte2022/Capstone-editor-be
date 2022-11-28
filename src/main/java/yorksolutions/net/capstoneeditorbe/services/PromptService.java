@@ -21,7 +21,7 @@ public class PromptService {
 
         try {
             return this.promptRepository.save(
-                    new Prompt(requestDTO.prompt, requestDTO.idOfTitle, requestDTO.process));
+                    new Prompt(requestDTO.prompt, requestDTO.prompt2, requestDTO.prompt3, requestDTO.prompt4, requestDTO.idOfTitle, requestDTO.process));
 
 
         } catch (RuntimeException exception) {
@@ -54,6 +54,9 @@ public class PromptService {
 
         Prompt prompt = updateThisPrompt.get();
         prompt.setPrompt(requestDTO.prompt);
+        prompt.setPrompt2(requestDTO.prompt2);
+        prompt.setPrompt2(requestDTO.prompt3);
+        prompt.setPrompt2(requestDTO.prompt4);
         prompt.setProcess(requestDTO.process);
 
         return promptRepository.save(prompt);

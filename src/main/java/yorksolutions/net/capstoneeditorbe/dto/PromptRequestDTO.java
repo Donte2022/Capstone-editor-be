@@ -6,6 +6,12 @@ public class PromptRequestDTO {
 
     public String prompt;
 
+    public String prompt2;
+
+    public String prompt3;
+
+    public String prompt4;
+
     public String process;
 
 }

@@ -17,6 +17,12 @@ public class Prompt {
 
     private String prompt;
 
+    private String prompt2;
+
+    private String prompt3;
+
+    private String prompt4;
+
     private String process;
 
     @OneToOne
@@ -25,8 +31,9 @@ public class Prompt {
     public Prompt() {
     }
 
-    public Prompt(String prompt, Long idOfTitle, String process) {
+    public Prompt(String prompt, String prompt2, String prompt3, String prompt4, Long idOfTitle, String process) {
         this.prompt = prompt;
+        this.prompt2 = prompt2;
         this.process = process;
         this.idOfTitle = idOfTitle;
     }
@@ -49,6 +56,30 @@ public class Prompt {
 
     public void setPrompt(String prompt) {
         this.prompt = prompt;
+    }
+
+    public String getPrompt2() {
+        return prompt2;
+    }
+
+    public void setPrompt2(String prompt2) {
+        this.prompt2 = prompt2;
+    }
+
+    public String getPrompt3() {
+        return prompt3;
+    }
+
+    public void setPrompt3(String prompt3) {
+        this.prompt3 = prompt3;
+    }
+
+    public String getPrompt4() {
+        return prompt4;
+    }
+
+    public void setPrompt4(String prompt4) {
+        this.prompt4 = prompt4;
     }
 
     public Stage getStage() {
