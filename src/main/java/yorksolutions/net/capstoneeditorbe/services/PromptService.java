@@ -55,8 +55,8 @@ public class PromptService {
         Prompt prompt = updateThisPrompt.get();
         prompt.setPrompt(requestDTO.prompt);
         prompt.setPrompt2(requestDTO.prompt2);
-        prompt.setPrompt2(requestDTO.prompt3);
-        prompt.setPrompt2(requestDTO.prompt4);
+        prompt.setPrompt3(requestDTO.prompt3);
+        prompt.setPrompt4(requestDTO.prompt4);
         prompt.setProcess(requestDTO.process);
 
         return promptRepository.save(prompt);

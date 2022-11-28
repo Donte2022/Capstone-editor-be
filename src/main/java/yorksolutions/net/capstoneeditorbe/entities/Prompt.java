@@ -40,6 +40,16 @@ public class Prompt {
         this.idOfTitle = idOfTitle;
     }
 
+
+//    public Prompt(Long idOfTitle, String prompt, String prompt2, String prompt3, String prompt4, String process) {
+//        this.prompt = prompt;
+//        this.prompt2 = prompt2;
+//        this.prompt3 = prompt3;
+//        this.prompt4 = prompt4;
+//        this.process = process;
+//        this.idOfTitle = idOfTitle;
+//    }
+
     public Long getId() {
         return id;
     }
